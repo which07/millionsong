@@ -1,0 +1,33 @@
+GIT
+  remote: git@github.com:mortardata/mortar-api-ruby.git
+  revision: 656ef2002b7862da291b004c7216d123d3469933
+  ref: dev
+  specs:
+    mortar-api-ruby (0.1.0)
+      excon (~> 0.15.4)
+
+GIT
+  remote: git@github.com:mortardata/mortar.git
+  revision: 62a99a55e2dfaa1326a2b7ad491cf44bc0adc42d
+  ref: dev
+  specs:
+    mortar (0.1.0)
+      launchy (~> 2.1.1)
+      mortar-api-ruby (~> 0.1.0)
+      netrc (~> 0.7.5)
+
+GEM
+  remote: http://rubygems.org/
+  specs:
+    addressable (2.3.2)
+    excon (0.15.5)
+    launchy (2.1.2)
+      addressable (~> 2.3)
+    netrc (0.7.7)
+
+PLATFORMS
+  ruby
+
+DEPENDENCIES
+  mortar!
+  mortar-api-ruby!

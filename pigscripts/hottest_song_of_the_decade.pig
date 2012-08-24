@@ -26,7 +26,8 @@ filtered = FILTER songs
 
 -- Convert the year into a decade using python
 with_decade = FOREACH filtered
-             GENERATE *, date_utils.decade(year) AS decade;
+             GENERATE artist_name, title, year, song_hotness, 
+                      date_utils.decade(year) AS decade;
 
 -- group the rows by decade, and find the hottest song
 -- in each decade

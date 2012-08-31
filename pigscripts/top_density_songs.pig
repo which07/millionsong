@@ -13,7 +13,7 @@ REGISTER '../udfs/python/millionsong.py' USING streaming_python AS millionsong;
 IMPORT '../macros/millionsong.pig';
 
 -- Load up the million song dataset
--- using our ALL_SONGS() pig macro 
+-- using our ALL_SONGS() pig macro from millionsong.pig
 -- (we can substitute ONE_SONGS_FILE() to get a smaller dataset)
 songs = ALL_SONGS();
 
@@ -22,7 +22,7 @@ filtered_songs = FILTER songs BY duration > 0;
 
 -- Use FOREACH to run calculations on every row.
 -- Here, we calculate density (sounds per second) using 
--- the density function we wrote in python below
+-- the the Python UDF density function from millionsong.py
 song_density = FOREACH filtered_songs 
               GENERATE artist_name, 
                        title,

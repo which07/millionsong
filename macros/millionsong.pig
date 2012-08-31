@@ -1,6 +1,6 @@
 /**
  * millionsong: Macros for accessing the million song dataset.
- *
+ *              See the data spec for million song dataset at http://bit.ly/vOBKPe
  */
 
 /**

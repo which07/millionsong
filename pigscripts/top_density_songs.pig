@@ -15,7 +15,7 @@ IMPORT '../macros/millionsong.pig';
 -- Load up the million song dataset
 -- using our ALL_SONGS() pig macro from millionsong.pig
 -- (we can substitute ONE_SONGS_FILE() to get a smaller dataset)
-songs = ALL_SONGS();
+songs = ONE_SONGS_FILE();
 
 -- Use FILTER to get only songs that have a duration
 filtered_songs = FILTER songs BY duration > 0;
